@@ -1,5 +1,6 @@
 export enum CategoryType {
   Link = 'Link',
+  GroupLink = 'GroupLink',
   Dashboard = 'Dashboard',
 }
 
@@ -12,25 +13,25 @@ export enum IndicatorType {
 export const scorecardList = [
   {
     kpiId: 'warranty',
-    kpiName: 'WARRANTY MANAGEMENT',
+    kpiName: 'Warranty Management',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Warranty management entails administering warranty terms for products or services, including tracking, processing claims, and ensuring compliance.',
   },
   {
     kpiId: 'compliance',
-    kpiName: 'COMPLIANCE',
+    kpiName: 'Compliance',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Compliance involves adhering to regulatory standards, industry guidelines, and internal policies to ensure legal and ethical conformity within an organization.',
   },
   {
     kpiId: 'design_to_value',
-    kpiName: 'DESIGN TO VALUE',
+    kpiName: 'Design To Value',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
-    kpiId: 'pctr',
-    kpiName: 'PCTR',
+    kpiId: 'pci',
+    kpiName: 'Product Cost Index',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
@@ -42,49 +43,49 @@ export const scorecardList = [
   },
   {
     kpiId: 'supply_chain_resilience',
-    kpiName: 'SUPPLY CHAIN RESILIENCE',
+    kpiName: 'Supply Chain Resilience',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     kpiId: 'cpi_meeting',
-    kpiName: 'CPI MEETING',
+    kpiName: 'CPI Meeting',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     kpiId: 'spend_management',
-    kpiName: 'SPEND MANAGEMENT',
+    kpiName: 'Spend Management',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     kpiId: 'intellectual_property_management',
-    kpiName: 'INTELLECTUAL PROPERTY MANAGEMENT',
+    kpiName: 'Intellectual Property Management',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     kpiId: 'competitive_analysis',
-    kpiName: 'COMPETITIVE ANALYSIS',
+    kpiName: 'Competitive Analysis',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     kpiId: 'sales_volumne',
-    kpiName: 'SALES VOLUME',
+    kpiName: 'Sales Volume',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     kpiId: 'sales_revenue',
-    kpiName: 'SALES REVENUE',
+    kpiName: 'Sales Revenue',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
   {
     kpiId: 'npss',
-    kpiName: 'NPSS-New Product Share of Sales',
+    kpiName: 'NPSS-New Product Share of Sales',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
@@ -193,6 +194,101 @@ export const kpiData: { [index: string]: any } = {
           {
             categoryName: 'MT',
             type: CategoryType.Dashboard,
+          },
+        ],
+      },
+    ],
+  },
+  pci: {
+    kpiName: 'Product Cost Index',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    subKpis: [
+      {
+        subKpiName: 'Dosing & Disinfection',
+        shortDescription:
+          'Short description related to dosing & disinfection...',
+        color: IndicatorType.Positive,
+        subCategory: [
+          {
+            categoryName: 'Dosing',
+            type: CategoryType.GroupLink,
+            data: [
+              {
+                name: 'Digital Dosing',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+              {
+                name: 'Mechanical Dosing',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+            ],
+          },
+          {
+            categoryName: 'Disinfection',
+            type: CategoryType.Link,
+            link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+          },
+        ],
+      },
+      {
+        subKpiName: 'Multistage',
+        shortDescription: 'Short description related to Multistage...',
+        color: IndicatorType.Positive,
+        subCategory: [
+          {
+            categoryName: 'CR',
+            type: CategoryType.GroupLink,
+            data: [
+              {
+                name: 'Large CR',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+              {
+                name: 'Large CRE',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+              {
+                name: 'Small CR',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+              {
+                name: 'Small CRE',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+            ],
+          },
+          {
+            categoryName: 'CM',
+            type: CategoryType.GroupLink,
+            data: [
+              {
+                name: 'CM',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+              {
+                name: 'CME',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+            ],
+          },
+          {
+            categoryName: 'BM',
+            type: CategoryType.Link,
+            link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+          },
+          {
+            categoryName: 'MT',
+            type: CategoryType.GroupLink,
+            data: [
+              {
+                name: 'MT',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+              {
+                name: 'MTE',
+                link: 'https://app.powerbi.com/groups/me/apps/daec3be8-3b9b-490f-9bac-6e05c6f07a9b/reports/175ade95-aaa8-49b5-ade0-d78399229326/ReportSection23d6d76fba0763280870?experience=power-bi',
+              },
+            ],
           },
         ],
       },

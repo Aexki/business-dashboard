@@ -12,7 +12,7 @@ import {
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
 import { CategoryType, kpiData } from '../constant';
 
 const DetailsComponent = () => {
@@ -25,6 +25,68 @@ const DetailsComponent = () => {
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
+
+  const generateSummary = (categoryDataType: string, category: any) => {
+    switch (categoryDataType) {
+      case CategoryType.Link:
+        return (
+          <Box key={category.categoryName}>
+            <Typography sx={{ fontWeight: 700, color: 'black' }}>
+              {category.categoryName}
+            </Typography>
+            <ListItem key={category.categoryName}>
+              <ListItemIcon>
+                <SubdirectoryArrowRightIcon />
+              </ListItemIcon>
+              <Link to={category.link} target="_blank">
+                <Typography sx={{ fontWeight: 700, color: 'black' }}>
+                  {category.categoryName}
+                </Typography>
+              </Link>
+            </ListItem>
+          </Box>
+        );
+      case CategoryType.GroupLink:
+        return (
+          <Box key={category.categoryName}>
+            <Typography sx={{ fontWeight: 700 }}>
+              {category.categoryName}
+            </Typography>
+            {category.data.map((linkData: { name: string; link: string }) => {
+              return (
+                <ListItem key={linkData.name}>
+                  <ListItemIcon>
+                    <SubdirectoryArrowRightIcon />
+                  </ListItemIcon>
+                  <Link to={linkData.link} target="_blank">
+                    <ListItemText
+                      primary={linkData.name}
+                      sx={{ color: 'black' }}
+                    />
+                  </Link>
+                </ListItem>
+              );
+            })}
+          </Box>
+        );
+      case CategoryType.Dashboard:
+        return (
+          <ListItem key={category.categoryName}>
+            <ListItemIcon>
+              <SubdirectoryArrowRightIcon />
+            </ListItemIcon>
+            <Link to={`/${params.kpiId}/dosing`} target="_blank">
+              <ListItemText
+                primary={category.categoryName}
+                sx={{ color: 'black' }}
+              />
+            </Link>
+          </ListItem>
+        );
+      default:
+        return <div>No Data</div>;
+    }
+  };
 
   return data ? (
     <Box sx={{ p: 8 }}>
@@ -69,31 +131,7 @@ const DetailsComponent = () => {
             <AccordionDetails>
               <List dense={true}>
                 {kpi.subCategory.map((category: any) => {
-                  return category.type === CategoryType.Link ? (
-                    <ListItem>
-                      <ListItemIcon>
-                        <NavigateNextIcon />
-                      </ListItemIcon>
-                      <Link to={category.link} target="_blank">
-                        <ListItemText
-                          primary={category.categoryName}
-                          sx={{ color: 'black' }}
-                        />
-                      </Link>
-                    </ListItem>
-                  ) : (
-                    <ListItem>
-                      <ListItemIcon>
-                        <NavigateNextIcon />
-                      </ListItemIcon>
-                      <Link to={`/${params.kpiId}/dosing`} target="_blank">
-                        <ListItemText
-                          primary={category.categoryName}
-                          sx={{ color: 'black' }}
-                        />
-                      </Link>
-                    </ListItem>
-                  );
+                  return generateSummary(category.type, category);
                 })}
               </List>
             </AccordionDetails>
