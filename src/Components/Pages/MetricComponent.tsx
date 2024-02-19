@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import BackNavigationComponent from '../common/BackNavigationComponent';
-import { Subtitles } from '@mui/icons-material';
 
 const graphData: { [index: string]: any } = {
   graph1: {
