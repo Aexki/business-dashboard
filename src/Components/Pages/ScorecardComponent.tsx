@@ -89,7 +89,9 @@ const ScorecardComponent = () => {
                                   <Typography sx={{ fontSize: '16px' }}>
                                     Product Line {idx + 1}
                                   </Typography>
-                                  <Typography sx={{ fontSize: '14px', color: '#CCC' }}>
+                                  <Typography
+                                    sx={{ fontSize: '14px', color: '#CCC' }}
+                                  >
                                     Status:{' '}
                                     <span
                                       style={{
@@ -119,7 +121,7 @@ const ScorecardComponent = () => {
                               <Box
                                 sx={{
                                   marginRight:
-                                    idx ==
+                                    idx ===
                                     scorecardData.productLineStatus.length - 1
                                       ? 0
                                       : '10px',
