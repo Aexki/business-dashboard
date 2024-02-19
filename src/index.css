@@ -4,6 +4,7 @@ body {
         "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #f4f5f7;
 }
 
 code {
@@ -22,6 +23,7 @@ code {
     justify-content: space-between;
     background-color: #01386b;
     color: white;
+    z-index: 999;
 }
 
 .logo {
@@ -37,6 +39,7 @@ code {
     cursor: pointer;
     text-decoration: none !important;
     border: 0.1px solid #01386b;
+    height: 100%;
 }
 
 .scorecardContainer .MuiCardContent-root {

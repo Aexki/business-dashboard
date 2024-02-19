@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Box, ThemeProvider, createTheme } from '@mui/material';
-import Header from './Components/Header';
-import DetailsComponent from './Pages/DetailsComponent';
-import ScorecardComponent from './Pages/ScorecardComponent';
-import MetricComponent from './Pages/MetricComponent';
+import Navbar from './Components/common/Navbar';
+import DetailsComponent from './Components/Pages/DetailsComponent';
+import ScorecardComponent from './Components/Pages/ScorecardComponent';
+import MetricComponent from './Components/Pages/MetricComponent';
 
 const darkTheme = createTheme({
   palette: {
@@ -17,7 +17,7 @@ const App = () => {
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
         <Box>
-          <Header />
+          <Navbar />
           <Routes>
             <Route path="/" element={<ScorecardComponent />} />
             <Route path="/:kpiId" element={<DetailsComponent />} />

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   Accordion,
   AccordionDetails,
@@ -9,11 +10,12 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
-import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
-import { CategoryType, kpiData } from '../constant';
+import { CategoryType, SubGroupType, kpiData } from '../../constant';
+import LinkIcon from '@mui/icons-material/Link';
+import BackNavigationComponent from '../common/BackNavigationComponent';
 
 const DetailsComponent = () => {
   const params = useParams();
@@ -46,27 +48,38 @@ const DetailsComponent = () => {
             </ListItem>
           </Box>
         );
-      case CategoryType.GroupLink:
+      case CategoryType.Group:
         return (
           <Box key={category.categoryName}>
             <Typography sx={{ fontWeight: 700 }}>
               {category.categoryName}
             </Typography>
-            {category.data.map((linkData: { name: string; link: string }) => {
-              return (
-                <ListItem key={linkData.name}>
-                  <ListItemIcon>
-                    <SubdirectoryArrowRightIcon />
-                  </ListItemIcon>
-                  <Link to={linkData.link} target="_blank">
-                    <ListItemText
-                      primary={linkData.name}
-                      sx={{ color: 'black' }}
-                    />
-                  </Link>
-                </ListItem>
-              );
-            })}
+            {category.data.map(
+              (linkData: { name: string; type: string; link: string }) => {
+                return (
+                  <ListItem key={linkData.name}>
+                    <ListItemIcon>
+                      <SubdirectoryArrowRightIcon />
+                    </ListItemIcon>
+                    {linkData.type === SubGroupType.Dashboard ? (
+                      <Link to={`/${params.kpiId}/${linkData.link}`}>
+                        <ListItemText
+                          primary={linkData.name}
+                          sx={{ color: 'black' }}
+                        />
+                      </Link>
+                    ) : (
+                      <Link to={linkData.link} target="_blank">
+                        <ListItemText
+                          primary={linkData.name}
+                          sx={{ color: 'black' }}
+                        />
+                      </Link>
+                    )}
+                  </ListItem>
+                );
+              }
+            )}
           </Box>
         );
       case CategoryType.Dashboard:
@@ -75,7 +88,7 @@ const DetailsComponent = () => {
             <ListItemIcon>
               <SubdirectoryArrowRightIcon />
             </ListItemIcon>
-            <Link to={`/${params.kpiId}/dosing`} target="_blank">
+            <Link to={`/${params.kpiId}/${category.graphId}`}>
               <ListItemText
                 primary={category.categoryName}
                 sx={{ color: 'black' }}
@@ -89,16 +102,40 @@ const DetailsComponent = () => {
   };
 
   return data ? (
-    <Box sx={{ p: 8 }}>
-      <Typography
-        sx={{ fontSize: '48px', fontWeight: 700, color: '#01386B', my: 2 }}
-      >
-        {data.kpiName}
-      </Typography>
+    <Box sx={{ p: 8, pt: 4 }}>
+      <Box id="detailHeaderContainer" sx={{ display: 'flex' }}>
+        <BackNavigationComponent />
+        <Typography
+          sx={{ fontSize: '48px', fontWeight: 700, color: '#01386B', my: 2 }}
+        >
+          {data.kpiName}
+        </Typography>
+      </Box>
       <Typography>{data.kpiDescription}</Typography>
+      {data.site && (
+        <Link
+          to={data.site}
+          target="_blank"
+          style={{
+            display: 'flex',
+            marginTop: '40px',
+            color: '#01386B',
+            textUnderlineOffset: 3,
+          }}
+        >
+          <LinkIcon sx={{ mt: '1px', mr: 1 }} />
+          <Typography>Link to Grundfos site for {data.kpiName} KPI</Typography>
+        </Link>
+      )}
       {data.subKpis.length > 0 && (
         <Typography
-          sx={{ fontSize: '24px', fontWeight: 700, color: '#01386B', my: 5 }}
+          sx={{
+            fontSize: '24px',
+            fontWeight: 700,
+            color: '#01386B',
+            mt: 5,
+            mb: 3,
+          }}
         >
           Sub-Category
         </Typography>

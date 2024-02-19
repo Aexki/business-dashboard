@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import logo from '../assets/images/Grundfos-logo-white.png';
+import logo from '../../assets/images/Grundfos-logo-white.png';
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
-import AvatarComponent from './common/AvatarComponent';
+import AvatarComponent from './AvatarComponent';
 
-const Header = () => {
+const Navbar = () => {
   const [userName] = useState<string>('Sabatini Jena');
 
   return (
@@ -25,4 +25,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
