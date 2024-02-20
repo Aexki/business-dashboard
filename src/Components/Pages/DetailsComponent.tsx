@@ -13,9 +13,16 @@ import {
 import { Link, useParams } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
-import { CategoryType, SubGroupType, kpiData } from '../../constant';
+import {
+  CategoryType,
+  SubGroupType,
+  getBackgroundColor,
+  getColor,
+  kpiData,
+} from '../../constant';
 import LinkIcon from '@mui/icons-material/Link';
 import BackNavigationComponent from '../common/BackNavigationComponent';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const DetailsComponent = () => {
   const params = useParams();
@@ -32,35 +39,49 @@ const DetailsComponent = () => {
     switch (categoryDataType) {
       case CategoryType.Link:
         return (
-          <Box key={category.categoryName}>
-            <Typography sx={{ fontWeight: 700, color: 'black' }}>
-              {category.categoryName}
-            </Typography>
-            <ListItem key={category.categoryName}>
-              <ListItemIcon>
-                <SubdirectoryArrowRightIcon />
-              </ListItemIcon>
-              <Link to={category.link} target="_blank">
-                <Typography sx={{ fontWeight: 700, color: 'black' }}>
-                  {category.categoryName}
-                </Typography>
-              </Link>
-            </ListItem>
+          <Box
+            key={category.categoryName}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            <CircleIcon
+              sx={{ color: getColor(category.status), fontSize: 10 }}
+            />
+            &emsp;
+            <Link to={category.link} target="_blank">
+              <Typography sx={{ fontWeight: 700, color: 'black' }}>
+                {category.categoryName}
+              </Typography>
+            </Link>
           </Box>
         );
       case CategoryType.Group:
         return (
           <Box key={category.categoryName}>
-            <Typography sx={{ fontWeight: 700 }}>
-              {category.categoryName}
-            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <CircleIcon
+                sx={{ color: getColor(category.status), fontSize: 10 }}
+              />
+              &emsp;
+              <Typography sx={{ fontWeight: 700 }}>
+                {category.categoryName}
+              </Typography>
+            </Box>
             {category.data.map(
-              (linkData: { name: string; type: string; link: string }) => {
+              (linkData: {
+                name: string;
+                type: string;
+                status: number;
+                link: string;
+              }) => {
                 return (
                   <ListItem key={linkData.name}>
                     <ListItemIcon>
                       <SubdirectoryArrowRightIcon />
                     </ListItemIcon>
+                    <CircleIcon
+                      sx={{ color: getColor(linkData.status), fontSize: 10 }}
+                    />
+                    &emsp;
                     {linkData.type === SubGroupType.Dashboard ? (
                       <Link to={`/${params.kpiId}/${linkData.link}`}>
                         <ListItemText
@@ -84,9 +105,13 @@ const DetailsComponent = () => {
         );
       case CategoryType.Dashboard:
         return (
-          <ListItem key={category.categoryName}>
-            <ListItemIcon>
+          <ListItem key={category.categoryName} sx={{ display: 'flex' }}>
+            <ListItemIcon sx={{ display: 'flex', alignItems: 'center' }}>
               <SubdirectoryArrowRightIcon />
+              <CircleIcon
+                sx={{ color: getColor(category.status), fontSize: 10 }}
+              />
+              &emsp;
             </ListItemIcon>
             <Link to={`/${params.kpiId}/${category.graphId}`}>
               <ListItemText
@@ -154,7 +179,7 @@ const DetailsComponent = () => {
             >
               <Box
                 className="indicator"
-                sx={{ backgroundColor: kpi.color }}
+                sx={{ backgroundColor: getColor(kpi.status) }}
               ></Box>
               <Typography sx={{ width: '33%', flexShrink: 0 }}>
                 {kpi.subKpiName}

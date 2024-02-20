@@ -10,45 +10,14 @@ import {
 } from '@mui/material';
 import StackedBarChartIcon from '@mui/icons-material/StackedBarChart';
 import { Link } from 'react-router-dom';
-import { scorecardList } from '../../constant';
+import {
+  getBackgroundColor,
+  getColor,
+  getStatus,
+  scorecardList,
+} from '../../constant';
 
 const ScorecardComponent = () => {
-  const getStatus = (statusCode: number): string => {
-    let status;
-    if (statusCode === 1) {
-      status = 'Danger';
-    } else if (statusCode === 2) {
-      status = 'Warning';
-    } else {
-      status = 'Safe';
-    }
-    return status;
-  };
-
-  const getColor = (status: number): string => {
-    let color;
-    if (status === 1) {
-      color = 'rgb(255, 0, 0)';
-    } else if (status === 2) {
-      color = 'rgb(255, 128, 0)';
-    } else {
-      color = 'rgb(76, 153, 0)';
-    }
-    return color;
-  };
-
-  const getBackgroundColor = (status: number): string => {
-    let bgColor;
-    if (status === 1) {
-      bgColor = 'rgb(255, 204, 204)';
-    } else if (status === 2) {
-      bgColor = 'rgb(255, 229, 204)';
-    } else {
-      bgColor = 'rgb(153, 255, 153)';
-    }
-    return bgColor;
-  };
-
   return (
     <Grid container spacing={2} sx={{ p: 5 }}>
       {scorecardList.map((scorecardData, index) => {
