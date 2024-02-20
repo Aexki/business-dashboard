@@ -13,13 +13,7 @@ import {
 import { Link, useParams } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
-import {
-  CategoryType,
-  SubGroupType,
-  getBackgroundColor,
-  getColor,
-  kpiData,
-} from '../../constant';
+import { CategoryType, SubGroupType, getColor, kpiData } from '../../constant';
 import LinkIcon from '@mui/icons-material/Link';
 import BackNavigationComponent from '../common/BackNavigationComponent';
 import CircleIcon from '@mui/icons-material/Circle';
