@@ -56,7 +56,7 @@ const ScorecardComponent = () => {
                               title={
                                 <Box>
                                   <Typography sx={{ fontSize: '16px' }}>
-                                    Product Line {idx + 1}
+                                  {idx === 0 ? 'Dosing and Disinfection' : idx === 1 ? 'Multistage' : 'Motors and Drive'}
                                   </Typography>
                                   <Typography
                                     sx={{ fontSize: '14px', color: '#CCC' }}
@@ -96,7 +96,7 @@ const ScorecardComponent = () => {
                                       : '10px',
                                   fontSize: '.7rem',
                                   height: '20px',
-                                  width: '20px',
+                                  width: '30px',
                                   padding: '4px',
                                   borderRadius: '8px',
                                   backgroundColor: `${getBackgroundColor(
@@ -106,9 +106,10 @@ const ScorecardComponent = () => {
                                   border: `1px solid ${getColor(
                                     productLineStatus
                                   )}`,
+                                  textAlign: 'center',
                                 }}
                               >
-                                {`PL${idx + 1}`}
+                                {idx === 0 ? 'D&D' : idx === 1 ? 'MS' : 'M&D'}
                               </Box>
                             </Tooltip>
                           );
@@ -135,7 +136,7 @@ const ScorecardComponent = () => {
                       color: 'black',
                     }}
                   >
-                    Updated Monthly
+                    Updated {scorecardData.frequency}
                   </Typography>
                 </CardContent>
               </Card>

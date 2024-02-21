@@ -4,10 +4,13 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
+  FormControlLabel,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Radio,
+  RadioGroup,
   Typography,
 } from '@mui/material';
 import { Link, useParams } from 'react-router-dom';
@@ -61,32 +64,33 @@ const DetailsComponent = () => {
               </Typography>
             </Box>
             {category.data.map(
-              (linkData: {
+              (subData: {
                 name: string;
                 type: string;
                 status: number;
-                link: string;
+                link?: string;
+                graphId?: string;
               }) => {
                 return (
-                  <ListItem key={linkData.name}>
+                  <ListItem key={subData.name}>
                     <ListItemIcon>
                       <SubdirectoryArrowRightIcon />
                     </ListItemIcon>
                     <CircleIcon
-                      sx={{ color: getColor(linkData.status), fontSize: 10 }}
+                      sx={{ color: getColor(subData.status), fontSize: 10 }}
                     />
                     &emsp;
-                    {linkData.type === SubGroupType.Dashboard ? (
-                      <Link to={`/${params.kpiId}/${linkData.link}`}>
+                    {subData.type === SubGroupType.Dashboard ? (
+                      <Link to={`/${params.kpiId}/${subData.graphId}`}>
                         <ListItemText
-                          primary={linkData.name}
+                          primary={subData.name}
                           sx={{ color: 'black' }}
                         />
                       </Link>
                     ) : (
-                      <Link to={linkData.link} target="_blank">
+                      <Link to={subData.link ?? ''} target="_blank">
                         <ListItemText
-                          primary={linkData.name}
+                          primary={subData.name}
                           sx={{ color: 'black' }}
                         />
                       </Link>
@@ -99,21 +103,74 @@ const DetailsComponent = () => {
         );
       case CategoryType.Dashboard:
         return (
-          <ListItem key={category.categoryName} sx={{ display: 'flex' }}>
-            <ListItemIcon sx={{ display: 'flex', alignItems: 'center' }}>
-              <SubdirectoryArrowRightIcon />
-              <CircleIcon
-                sx={{ color: getColor(category.status), fontSize: 10 }}
-              />
-              &emsp;
-            </ListItemIcon>
-            <Link to={`/${params.kpiId}/${category.graphId}`}>
-              <ListItemText
-                primary={category.categoryName}
-                sx={{ color: 'black' }}
-              />
-            </Link>
-          </ListItem>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <CircleIcon
+              sx={{ color: getColor(category.status), fontSize: 10 }}
+            />
+            &nbsp;
+            <ListItem key={category.categoryName}>
+              <Link to={`/${params.kpiId}/${category.graphId}`}>
+                <ListItemText
+                  primary={category.categoryName}
+                  sx={{ color: 'black' }}
+                />
+              </Link>
+            </ListItem>
+          </Box>
+        );
+      case CategoryType.Question:
+        return (
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column',
+            }}
+          >
+            <ListItem
+              key={category.question}
+              sx={{
+                display: 'flex',
+                alignItems: 'start',
+                flexDirection: 'column',
+              }}
+            >
+              <Typography sx={{ fontWeight: 700 }}>
+                <b>Q.</b>&emsp;{category.question}
+              </Typography>
+              <RadioGroup row>
+                &emsp;&emsp;
+                <FormControlLabel
+                  value="Yes"
+                  control={
+                    <Radio
+                      sx={{
+                        color: 'green',
+                        '&.Mui-checked': {
+                          color: 'green',
+                        },
+                      }}
+                    />
+                  }
+                  label="Yes"
+                />
+                <FormControlLabel
+                  value="No"
+                  control={
+                    <Radio
+                      sx={{
+                        color: 'red',
+                        '&.Mui-checked': {
+                          color: 'red',
+                        },
+                      }}
+                    />
+                  }
+                  label="No"
+                />
+              </RadioGroup>
+            </ListItem>
+          </Box>
         );
       default:
         return <div>No Data</div>;
@@ -130,7 +187,7 @@ const DetailsComponent = () => {
           {data.kpiName}
         </Typography>
       </Box>
-      <Typography>{data.kpiDescription}</Typography>
+      <Typography sx={{ fontSize: '18px' }}>{data.kpiDescription}</Typography>
       {data.site && (
         <Link
           to={data.site}

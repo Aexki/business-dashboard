@@ -2,6 +2,7 @@ export enum CategoryType {
   Link = 'Link',
   Group = 'Group',
   Dashboard = 'Dashboard',
+  Question = 'Question',
 }
 
 export enum SubGroupType {
@@ -13,6 +14,12 @@ export enum IndicatorType {
   Danger = 1,
   Warning = 2,
   Positive = 3,
+}
+
+export enum Frequency {
+  Monthly = 'Monthly',
+  Quarterly = 'Quarterly',
+  Anually = 'Anually',
 }
 
 export const getRandomInt = (min: number, max: number): number => {
@@ -68,6 +75,7 @@ export const scorecardList = [
     ],
     description:
       'Warranty management entails administering warranty terms for products or services, including tracking, processing claims, and ensuring compliance.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'compliance',
@@ -79,6 +87,7 @@ export const scorecardList = [
     ],
     description:
       'Compliance involves adhering to regulatory standards, industry guidelines, and internal policies to ensure legal and ethical conformity within an organization.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'design_to_value',
@@ -90,6 +99,7 @@ export const scorecardList = [
     ],
     description:
       'Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'pci',
@@ -101,38 +111,42 @@ export const scorecardList = [
     ],
     description:
       'Tracking and optimizing product costs over time to ensure competitiveness and profitability in the market.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'supply_chain_resilience',
     kpiName: 'Supply Chain Resilience',
     productLineStatus: [
-      IndicatorType.Warning,
-      IndicatorType.Warning,
-      IndicatorType.Warning,
+      IndicatorType.Danger,
+      IndicatorType.Danger,
+      IndicatorType.Danger,
     ],
     description: `Ensuring the supply chain's resilience by strategically planning and managing risks, ensuring stability and adaptability to disruptions in the process.`,
+    frequency: Frequency.Quarterly,
   },
   {
     kpiId: 'cpi_meeting',
     kpiName: 'CPI Meeting',
     productLineStatus: [
       IndicatorType.Warning,
-      IndicatorType.Warning,
+      IndicatorType.Positive,
       IndicatorType.Warning,
     ],
     description:
-      'CPI Meeting focuses on Cost Performance Index, analyzing project cost efficiency, and identifying areas for cost optimization and budget control.',
+      'CPI meetings help in the ongoing improvement of products, services or processes through incremental and breakthrough improvements.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'spend_management',
     kpiName: 'Spend Management',
     productLineStatus: [
-      IndicatorType.Warning,
-      IndicatorType.Warning,
-      IndicatorType.Warning,
+      IndicatorType.Danger,
+      IndicatorType.Positive,
+      IndicatorType.Danger,
     ],
     description:
       'Optimizing spend across the organization by implementing strategic processes and tools to manage costs effectively and drive value.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'intellectual_property_management',
@@ -144,6 +158,7 @@ export const scorecardList = [
     ],
     description:
       'Managing and protecting intellectual property assets through legal frameworks and strategic practices to ensure their value and integrity are maintained.',
+    frequency: Frequency.Anually,
   },
   {
     kpiId: 'competitive_analysis',
@@ -155,6 +170,7 @@ export const scorecardList = [
     ],
     description:
       'Analyzing competitors to identify strengths, weaknesses, and strategies, aiding in making informed business decisions and improving market competitiveness.',
+    frequency: Frequency.Quarterly,
   },
   {
     kpiId: 'sales_volume',
@@ -167,6 +183,7 @@ export const scorecardList = [
     site: '',
     description:
       'Tracking and analyzing sales quantities to understand market trends and optimize sales strategies for improved revenue generation and market performance.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'sales_revenue',
@@ -179,6 +196,7 @@ export const scorecardList = [
     site: '',
     description:
       'Analyzing and managing sales revenue to optimize pricing, promotions, and distribution strategies for increased profitability and market competitiveness.',
+    frequency: Frequency.Monthly,
   },
   {
     kpiId: 'npss',
@@ -190,13 +208,14 @@ export const scorecardList = [
     ],
     description:
       'Tracking and optimizing the market share of new products in terms of sales to drive strategic decisions and product development initiatives.',
+    frequency: Frequency.Monthly,
   },
 ];
 
 export const kpiData: { [index: string]: any } = {
   warranty: {
     kpiName: 'Warranty Management',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Warranty management entails administering warranty terms for products or services, including tracking, processing claims, and ensuring compliance.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -211,22 +230,22 @@ export const kpiData: { [index: string]: any } = {
             data: [
               {
                 name: 'Digital Dosing',
-                link: 'graph7',
+                graphId: 'graph7',
                 type: SubGroupType.Dashboard,
                 status: IndicatorType.Positive,
               },
               {
                 name: 'Mechanical Dosing',
                 type: SubGroupType.Dashboard,
-                link: 'graph7',
+                graphId: 'graph7',
                 status: IndicatorType.Positive,
               },
             ],
           },
           {
             categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: 'graph7',
+            type: CategoryType.Dashboard,
+            graphId: 'graph7',
             status: IndicatorType.Warning,
           },
         ],
@@ -238,26 +257,26 @@ export const kpiData: { [index: string]: any } = {
         subCategory: [
           {
             categoryName: 'CR',
-            type: CategoryType.Link,
-            link: 'graph7',
+            type: CategoryType.Dashboard,
+            graphId: 'graph7',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'CM',
-            type: CategoryType.Link,
-            link: 'graph7',
+            type: CategoryType.Dashboard,
+            graphId: 'graph7',
             status: IndicatorType.Positive,
           },
           {
             categoryName: 'BM',
-            type: CategoryType.Link,
-            link: 'graph7',
+            type: CategoryType.Dashboard,
+            graphId: 'graph7',
             status: IndicatorType.Danger,
           },
           {
             categoryName: 'MT',
-            type: CategoryType.Link,
-            link: 'graph7',
+            type: CategoryType.Dashboard,
+            graphId: 'graph7',
             status: IndicatorType.Warning,
           },
         ],
@@ -294,7 +313,7 @@ export const kpiData: { [index: string]: any } = {
   },
   compliance: {
     kpiName: 'Compliance',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Compliance involves adhering to regulatory standards, industry guidelines, and internal policies to ensure legal and ethical conformity within an organization.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -393,7 +412,7 @@ export const kpiData: { [index: string]: any } = {
   },
   design_to_value: {
     kpiName: 'Design To Value',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -492,7 +511,7 @@ export const kpiData: { [index: string]: any } = {
   },
   pci: {
     kpiName: 'Product Cost Index',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Tracking and optimizing product costs over time to ensure competitiveness and profitability in the market.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -513,7 +532,7 @@ export const kpiData: { [index: string]: any } = {
               {
                 name: 'Mechanical Dosing',
                 type: SubGroupType.Dashboard,
-                link: 'graph8',
+                link: 'graph9',
                 status: IndicatorType.Warning,
               },
             ],
@@ -521,7 +540,7 @@ export const kpiData: { [index: string]: any } = {
           {
             categoryName: 'Disinfection',
             type: CategoryType.Link,
-            link: 'graph8',
+            link: 'graph10',
             status: IndicatorType.Warning,
           },
         ],
@@ -534,25 +553,25 @@ export const kpiData: { [index: string]: any } = {
           {
             categoryName: 'CR',
             type: CategoryType.Link,
-            link: 'graph8',
+            link: 'graph11',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'CM',
             type: CategoryType.Link,
-            link: 'graph8',
+            link: 'graph13',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'BM',
             type: CategoryType.Link,
-            link: 'graph8',
+            link: 'graph12',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'MT',
             type: CategoryType.Link,
-            link: 'graph8',
+            link: 'graph14',
             status: IndicatorType.Warning,
           },
         ],
@@ -569,13 +588,13 @@ export const kpiData: { [index: string]: any } = {
               {
                 name: 'Motors',
                 type: SubGroupType.Dashboard,
-                link: 'graph8',
+                link: 'graph15',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Drives',
                 type: SubGroupType.Dashboard,
-                link: 'graph8',
+                link: 'graph15',
                 status: IndicatorType.Warning,
               },
             ],
@@ -587,32 +606,19 @@ export const kpiData: { [index: string]: any } = {
   },
   supply_chain_resilience: {
     kpiName: 'Supply Chain Resilience',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Ensuring the supply chain's resilience by strategically planning and managing risks, ensuring stability and adaptability to disruptions in the process.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
           'Short description related to dosing & disinfection...',
-        status: IndicatorType.Warning,
+        status: IndicatorType.Danger,
         subCategory: [
           {
             categoryName: 'Dosing',
-            type: CategoryType.Group,
+            type: CategoryType.Link,
+            link: '',
             status: IndicatorType.Warning,
-            data: [
-              {
-                name: 'Digital Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
           },
           {
             categoryName: 'Disinfection',
@@ -625,7 +631,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Multistage',
         shortDescription: 'Short description related to Multistage...',
-        status: IndicatorType.Warning,
+        status: IndicatorType.Danger,
         subCategory: [
           {
             categoryName: 'CR',
@@ -656,7 +662,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Motors and Drives',
         shortDescription: 'Short description related to Motors and Drives...',
-        status: IndicatorType.Warning,
+        status: IndicatorType.Danger,
         subCategory: [
           {
             categoryName: 'Motors and Drives Graph',
@@ -686,7 +692,7 @@ export const kpiData: { [index: string]: any } = {
   },
   cpi_meeting: {
     kpiName: 'CPI Meeting',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `CPI meetings help in the ongoing improvement of products, services or processes through incremental and breakthrough improvements.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -695,60 +701,19 @@ export const kpiData: { [index: string]: any } = {
         status: IndicatorType.Warning,
         subCategory: [
           {
-            categoryName: 'Dosing',
-            type: CategoryType.Group,
-            status: IndicatorType.Warning,
-            data: [
-              {
-                name: 'Digital Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
-          },
-          {
-            categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Is the next CPI meeting planned?',
           },
         ],
       },
       {
         subKpiName: 'Multistage',
         shortDescription: 'Short description related to Multistage...',
-        status: IndicatorType.Warning,
+        status: IndicatorType.Positive,
         subCategory: [
           {
-            categoryName: 'CR',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'CM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'BM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'MT',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Is the next CPI meeting planned?',
           },
         ],
       },
@@ -758,26 +723,9 @@ export const kpiData: { [index: string]: any } = {
         status: IndicatorType.Warning,
         subCategory: [
           {
-            categoryName: 'Motors and Drives Graph',
-            status: IndicatorType.Warning,
-            type: CategoryType.Group,
-            data: [
-              {
-                name: 'Motors',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Drives',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
+            type: CategoryType.Question,
+            question: 'Is the next CPI meeting planned?',
           },
-          // Drive - 36, 37, 38
-          // Motors - 48, 19, 50, 51
         ],
       },
     ],
@@ -785,106 +733,72 @@ export const kpiData: { [index: string]: any } = {
   },
   spend_management: {
     kpiName: 'Spend Management',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Optimizing spend across the organization by implementing strategic processes and tools to manage costs effectively and drive value.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
           'Short description related to dosing & disinfection...',
-        status: IndicatorType.Warning,
+        status: IndicatorType.Danger,
         subCategory: [
           {
-            categoryName: 'Dosing',
-            type: CategoryType.Group,
-            status: IndicatorType.Warning,
-            data: [
-              {
-                name: 'Digital Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
+            categoryName: 'DP',
+            type: CategoryType.Dashboard,
+            graphId: 'graph16',
+            status: IndicatorType.Positive,
           },
           {
-            categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            categoryName: 'PLM',
+            type: CategoryType.Dashboard,
+            graphId: 'graph17',
+            status: IndicatorType.Danger,
           },
         ],
       },
       {
         subKpiName: 'Multistage',
         shortDescription: 'Short description related to Multistage...',
-        status: IndicatorType.Warning,
+        status: IndicatorType.Positive,
         subCategory: [
           {
-            categoryName: 'CR',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            categoryName: 'DP',
+            type: CategoryType.Dashboard,
+            graphId: 'graph18',
+            status: IndicatorType.Positive,
           },
           {
-            categoryName: 'CM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'BM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'MT',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            categoryName: 'PLM',
+            type: CategoryType.Dashboard,
+            graphId: 'graph19',
+            status: IndicatorType.Positive,
           },
         ],
       },
       {
         subKpiName: 'Motors and Drives',
         shortDescription: 'Short description related to Motors and Drives...',
-        status: IndicatorType.Warning,
+        status: IndicatorType.Danger,
         subCategory: [
           {
-            categoryName: 'Motors and Drives Graph',
-            status: IndicatorType.Warning,
-            type: CategoryType.Group,
-            data: [
-              {
-                name: 'Motors',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Drives',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
+            categoryName: 'DP',
+            type: CategoryType.Dashboard,
+            graphId: 'graph20',
+            status: IndicatorType.Positive,
           },
-          // Drive - 36, 37, 38
-          // Motors - 48, 19, 50, 51
+          {
+            categoryName: 'PLM',
+            type: CategoryType.Dashboard,
+            graphId: 'graph21',
+            status: IndicatorType.Danger,
+          },
         ],
       },
     ],
-    site: 'https://app.powerbi.com/groups/me/apps/afd66893-3275-4c81-9051-9a0f66139869/reports/24e546db-65f2-439f-a89f-9382b6014506/ReportSection05b44a1ad1141cd715ee?ctid=dabd5d90-87c2-44c9-93cd-783e03236e40&experience=power-bi&clientSideAuth=0',
+    site: 'https://app.powerbi.com/groups/me/apps/bf4121d9-d32a-495b-8b9f-86a3019efc6a/reports/6feb6745-27ad-408e-b07d-be333f30786a/ReportSection8dc8d46700ad2b83708c?experience=power-bi',
   },
   intellectual_property_management: {
     kpiName: 'IP Management',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Managing and protecting intellectual property assets through legal frameworks and strategic practices to ensure their value and integrity are maintained.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -932,7 +846,7 @@ export const kpiData: { [index: string]: any } = {
   },
   competitive_analysis: {
     kpiName: 'Competitive Analysis',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Analyzing competitors to identify strengths, weaknesses, and strategies, aiding in making informed business decisions and improving market competitiveness.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -941,29 +855,12 @@ export const kpiData: { [index: string]: any } = {
         status: IndicatorType.Warning,
         subCategory: [
           {
-            categoryName: 'Dosing',
-            type: CategoryType.Group,
-            status: IndicatorType.Warning,
-            data: [
-              {
-                name: 'Digital Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
+            type: CategoryType.Question,
+            question: 'Touch base with CA team?',
           },
           {
-            categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Reports from CA team?',
           },
         ],
       },
@@ -973,28 +870,12 @@ export const kpiData: { [index: string]: any } = {
         status: IndicatorType.Warning,
         subCategory: [
           {
-            categoryName: 'CR',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Touch base with CA team?',
           },
           {
-            categoryName: 'CM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'BM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'MT',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Reports from CA team?',
           },
         ],
       },
@@ -1004,26 +885,13 @@ export const kpiData: { [index: string]: any } = {
         status: IndicatorType.Warning,
         subCategory: [
           {
-            categoryName: 'Motors and Drives Graph',
-            status: IndicatorType.Warning,
-            type: CategoryType.Group,
-            data: [
-              {
-                name: 'Motors',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Drives',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
+            type: CategoryType.Question,
+            question: 'Touch base with CA team?',
           },
-          // Drive - 36, 37, 38
-          // Motors - 48, 19, 50, 51
+          {
+            type: CategoryType.Question,
+            question: 'Reports from CA team?',
+          },
         ],
       },
     ],
@@ -1031,7 +899,7 @@ export const kpiData: { [index: string]: any } = {
   },
   sales_volume: {
     kpiName: 'Sales Volume',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Tracking and analyzing sales quantities to understand market trends and optimize sales strategies for improved revenue generation and market performance.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -1040,28 +908,9 @@ export const kpiData: { [index: string]: any } = {
         status: IndicatorType.Warning,
         subCategory: [
           {
-            categoryName: 'Dosing',
-            type: CategoryType.Group,
-            status: IndicatorType.Warning,
-            data: [
-              {
-                name: 'Digital Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
-          },
-          {
-            categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: '',
+            categoryName: 'Dosing and Disinfection graph',
+            type: CategoryType.Dashboard,
+            graphId: 'graph22',
             status: IndicatorType.Warning,
           },
         ],
@@ -1073,26 +922,77 @@ export const kpiData: { [index: string]: any } = {
         subCategory: [
           {
             categoryName: 'CR',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Group,
+            data: [
+              {
+                name: 'Small CR',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph24',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'Large CR',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph25',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'Small CRE',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph26',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'Large CRE',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph27',
+                status: IndicatorType.Warning,
+              },
+            ],
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'CM',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Group,
+            data: [
+              {
+                name: 'CM',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph29',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'CME',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph30',
+                status: IndicatorType.Warning,
+              },
+            ],
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'BM',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Dashboard,
+            graphId: 'graph28',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'MT',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Group,
+            data: [
+              {
+                name: 'MT',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph31',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'MTE',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph32',
+                status: IndicatorType.Warning,
+              },
+            ],
             status: IndicatorType.Warning,
           },
         ],
@@ -1109,14 +1009,14 @@ export const kpiData: { [index: string]: any } = {
             data: [
               {
                 name: 'Motors',
-                type: SubGroupType.Link,
-                link: '',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph33',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Drives',
-                type: SubGroupType.Link,
-                link: '',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph34',
                 status: IndicatorType.Warning,
               },
             ],
@@ -1130,7 +1030,7 @@ export const kpiData: { [index: string]: any } = {
   },
   sales_revenue: {
     kpiName: 'Sales Revenue',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Analyzing and managing sales revenue to optimize pricing, promotions, and distribution strategies for increased profitability and market competitiveness.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
@@ -1139,28 +1039,9 @@ export const kpiData: { [index: string]: any } = {
         status: IndicatorType.Warning,
         subCategory: [
           {
-            categoryName: 'Dosing',
-            type: CategoryType.Group,
-            status: IndicatorType.Warning,
-            data: [
-              {
-                name: 'Digital Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
-          },
-          {
-            categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: '',
+            categoryName: 'Dosing and Disinfection graph',
+            type: CategoryType.Dashboard,
+            graphId: 'graph23',
             status: IndicatorType.Warning,
           },
         ],
@@ -1172,26 +1053,77 @@ export const kpiData: { [index: string]: any } = {
         subCategory: [
           {
             categoryName: 'CR',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Group,
+            data: [
+              {
+                name: 'Small CR',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph35',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'Large CR',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph36',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'Small CRE',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph37',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'Large CRE',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph38',
+                status: IndicatorType.Warning,
+              },
+            ],
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'CM',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Group,
+            data: [
+              {
+                name: 'CM',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph40',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'CME',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph41',
+                status: IndicatorType.Warning,
+              },
+            ],
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'BM',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Dashboard,
+            graphId: 'graph39',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'MT',
-            type: CategoryType.Link,
-            link: '',
+            type: CategoryType.Group,
+            data: [
+              {
+                name: 'MT',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph42',
+                status: IndicatorType.Warning,
+              },
+              {
+                name: 'MTE',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph43',
+                status: IndicatorType.Warning,
+              },
+            ],
             status: IndicatorType.Warning,
           },
         ],
@@ -1208,20 +1140,18 @@ export const kpiData: { [index: string]: any } = {
             data: [
               {
                 name: 'Motors',
-                type: SubGroupType.Link,
-                link: '',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph44',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Drives',
-                type: SubGroupType.Link,
-                link: '',
+                type: SubGroupType.Dashboard,
+                graphId: 'graph45',
                 status: IndicatorType.Warning,
               },
             ],
           },
-          // Drive - 36, 37, 38
-          // Motors - 48, 19, 50, 51
         ],
       },
     ],
@@ -1229,7 +1159,7 @@ export const kpiData: { [index: string]: any } = {
   },
   npss: {
     kpiName: 'New Product Share of Sales (NPSS)',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: `Tracking and optimizing the market share of new products in terms of sales to drive strategic decisions and product development initiatives.`,
     subKpis: [
       {
         subKpiName: 'Dosing & Disinfection',
