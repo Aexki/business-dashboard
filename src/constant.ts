@@ -89,18 +89,6 @@ export const scorecardList = [
       'Compliance involves adhering to regulatory standards, industry guidelines, and internal policies to ensure legal and ethical conformity within an organization.',
     frequency: Frequency.Monthly,
   },
-  // {
-  //   kpiId: 'design_to_value',
-  //   kpiName: 'Design To Value',
-  //   productLineStatus: [
-  //     IndicatorType.Warning,
-  //     IndicatorType.Warning,
-  //     IndicatorType.Warning,
-  //   ],
-  //   description:
-  //     'Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.',
-  //   frequency: Frequency.Monthly,
-  // },
   {
     kpiId: 'pci',
     kpiName: 'Product Cost Index',
@@ -412,105 +400,6 @@ export const kpiData: { [index: string]: any } = {
       link: 'https://grundfos.sharepoint.com/sites/GlobalProductCompliancetrainingandlearnings/SitePages/Regulatory-Outlook.aspx'
     }]
   },
-  // design_to_value: {
-  //   kpiName: 'Design To Value',
-  //   kpiDescription: `Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.`,
-  //   subKpis: [
-  //     {
-  //       subKpiName: 'Dosing & Disinfection',
-  //       shortDescription:
-  //         '',
-  //       status: IndicatorType.Warning,
-  //       subCategory: [
-  //         {
-  //           categoryName: 'Dosing',
-  //           type: CategoryType.Group,
-  //           status: IndicatorType.Warning,
-  //           data: [
-  //             {
-  //               name: 'Digital Dosing',
-  //               type: SubGroupType.Dashboard,
-  //               link: '',
-  //               status: IndicatorType.Warning,
-  //             },
-  //             {
-  //               name: 'Mechanical Dosing',
-  //               type: SubGroupType.Dashboard,
-  //               link: '',
-  //               status: IndicatorType.Warning,
-  //             },
-  //           ],
-  //         },
-  //         {
-  //           categoryName: 'Disinfection',
-  //           type: CategoryType.Dashboard,
-  //           link: '',
-  //           status: IndicatorType.Warning,
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       subKpiName: 'Multistage',
-  //       shortDescription: '',
-  //       status: IndicatorType.Warning,
-  //       subCategory: [
-  //         {
-  //           categoryName: 'CR',
-  //           type: CategoryType.Dashboard,
-  //           link: '',
-  //           status: IndicatorType.Warning,
-  //         },
-  //         {
-  //           categoryName: 'CM',
-  //           type: CategoryType.Dashboard,
-  //           link: '',
-  //           status: IndicatorType.Warning,
-  //         },
-  //         {
-  //           categoryName: 'BM',
-  //           type: CategoryType.Dashboard,
-  //           link: '',
-  //           status: IndicatorType.Warning,
-  //         },
-  //         {
-  //           categoryName: 'MT',
-  //           type: CategoryType.Dashboard,
-  //           link: '',
-  //           status: IndicatorType.Warning,
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       subKpiName: 'Motors and Drives',
-  //       shortDescription: '',
-  //       status: IndicatorType.Warning,
-  //       subCategory: [
-  //         {
-  //           categoryName: 'Motors and Drives Graph',
-  //           status: IndicatorType.Warning,
-  //           type: CategoryType.Group,
-  //           data: [
-  //             {
-  //               name: 'Motors',
-  //               type: SubGroupType.Dashboard,
-  //               link: 'graph7',
-  //               status: IndicatorType.Warning,
-  //             },
-  //             {
-  //               name: 'Drives',
-  //               type: SubGroupType.Dashboard,
-  //               link: 'graph7',
-  //               status: IndicatorType.Warning,
-  //             },
-  //           ],
-  //         },
-  //         // Drive - 36, 37, 38
-  //         // Motors - 48, 19, 50, 51
-  //       ],
-  //     },
-  //   ],
-  //   site: 'https://login.sievo.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DGrundfos_PPM%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520offline_access%2520userdetails%2520is_api%2520sievo_uid%26state%3DOpenIdConnect.AuthenticationProperties%253DQQwwr9-zYqAzaQaPKo6ZOhqyA_oi_Wlfp3RDeu40nHrw-XDr4zyJXinJvxmPxOoqNiauOjDmBXm1UKhtTMT-JsKrBXt6yXXk19uU5V2rveYFgXjcq0ifH5SbVQG4Itqe%26response_mode%3Dform_post%26nonce%3D638438515690273381.Njk5ZjAwNjEtYWM3My00OTQyLTkyMzgtYm',
-  // },
   pci: {
     kpiName: 'Product Cost Index',
     kpiDescription: `Tracking and optimizing product costs over time to ensure competitiveness and profitability in the market.`,
@@ -538,6 +427,7 @@ export const kpiData: { [index: string]: any } = {
                 status: IndicatorType.Warning,
               },
             ],
+            status: IndicatorType.Warning,
           },
           {
             categoryName: 'Disinfection',
@@ -590,14 +480,14 @@ export const kpiData: { [index: string]: any } = {
               {
                 name: 'Motors',
                 type: SubGroupType.Dashboard,
-                graphId: 'graph15',
+                graphId: '',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Drives',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph15',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
           },

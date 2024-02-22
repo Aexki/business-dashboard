@@ -363,7 +363,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Digital Dosing Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Digital Dosing - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -2694,7 +2694,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Mechanical Dosing Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Mechanical Dosing - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -2751,7 +2751,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Disinfection Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Disinfection - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -2808,7 +2808,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Multistage - CR Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Multistage - CR - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -2865,7 +2865,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Multistage - CM Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Multistage - CM - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -2922,7 +2922,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Multistage - BM Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Multistage - BM - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -2979,7 +2979,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Multistage - MT Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Multistage - MT - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -3036,7 +3036,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Motors and Drive - Motors Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Motors and Drive - Motors - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
@@ -3093,7 +3093,7 @@ const graphData: { [index: string]: any } = {
         },
       },
       title: {
-        text: 'Graph: Motors and Drive - Drives Target vs. Actual Over the Last 3 Years',
+        text: 'Graph: Motors and Drive - Drives - Target vs. Actual Over the Last 3 Years',
         align: 'center',
       },
       xAxis: {
