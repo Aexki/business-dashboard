@@ -89,18 +89,18 @@ export const scorecardList = [
       'Compliance involves adhering to regulatory standards, industry guidelines, and internal policies to ensure legal and ethical conformity within an organization.',
     frequency: Frequency.Monthly,
   },
-  {
-    kpiId: 'design_to_value',
-    kpiName: 'Design To Value',
-    productLineStatus: [
-      IndicatorType.Warning,
-      IndicatorType.Warning,
-      IndicatorType.Warning,
-    ],
-    description:
-      'Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.',
-    frequency: Frequency.Monthly,
-  },
+  // {
+  //   kpiId: 'design_to_value',
+  //   kpiName: 'Design To Value',
+  //   productLineStatus: [
+  //     IndicatorType.Warning,
+  //     IndicatorType.Warning,
+  //     IndicatorType.Warning,
+  //   ],
+  //   description:
+  //     'Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.',
+  //   frequency: Frequency.Monthly,
+  // },
   {
     kpiId: 'pci',
     kpiName: 'Product Cost Index',
@@ -176,9 +176,9 @@ export const scorecardList = [
     kpiId: 'sales_volume',
     kpiName: 'Sales Volume',
     productLineStatus: [
-      IndicatorType.Warning,
-      IndicatorType.Warning,
-      IndicatorType.Warning,
+      IndicatorType.Danger,
+      IndicatorType.Danger,
+      IndicatorType.Positive,
     ],
     site: '',
     description:
@@ -190,8 +190,8 @@ export const scorecardList = [
     kpiName: 'Sales Revenue',
     productLineStatus: [
       IndicatorType.Warning,
-      IndicatorType.Warning,
-      IndicatorType.Warning,
+      IndicatorType.Danger,
+      IndicatorType.Danger,
     ],
     site: '',
     description:
@@ -220,7 +220,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -252,7 +252,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Danger,
         subCategory: [
           {
@@ -283,7 +283,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -318,7 +318,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -328,13 +328,13 @@ export const kpiData: { [index: string]: any } = {
             data: [
               {
                 name: 'Digital Dosing',
-                type: SubGroupType.Link,
+                type: SubGroupType.Dashboard,
                 link: '',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
+                type: SubGroupType.Dashboard,
                 link: '',
                 status: IndicatorType.Warning,
               },
@@ -342,7 +342,7 @@ export const kpiData: { [index: string]: any } = {
           },
           {
             categoryName: 'Disinfection',
-            type: CategoryType.Link,
+            type: CategoryType.Dashboard,
             link: '',
             status: IndicatorType.Warning,
           },
@@ -350,30 +350,30 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
             categoryName: 'CR',
-            type: CategoryType.Link,
+            type: CategoryType.Dashboard,
             link: '',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'CM',
-            type: CategoryType.Link,
+            type: CategoryType.Dashboard,
             link: '',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'BM',
-            type: CategoryType.Link,
+            type: CategoryType.Dashboard,
             link: '',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'MT',
-            type: CategoryType.Link,
+            type: CategoryType.Dashboard,
             link: '',
             status: IndicatorType.Warning,
           },
@@ -381,7 +381,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -391,124 +391,126 @@ export const kpiData: { [index: string]: any } = {
             data: [
               {
                 name: 'Motors',
-                type: SubGroupType.Link,
+                type: SubGroupType.Dashboard,
                 link: '',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Drives',
-                type: SubGroupType.Link,
+                type: SubGroupType.Dashboard,
                 link: '',
                 status: IndicatorType.Warning,
               },
             ],
           },
-          // Drive - 36, 37, 38
-          // Motors - 48, 19, 50, 51
         ],
       },
     ],
     site: 'https://app.powerbi.com/groups/me/reports/421b3a06-9a52-49ec-a3e0-99508974885b/ReportSectionab86c1770124958c7d71?ctid=dabd5d90-87c2-44c9-93cd-783e03236e40&experience=power-bi',
+    extraLinks: [{
+      name: 'Regulatory outlook',
+      link: 'https://grundfos.sharepoint.com/sites/GlobalProductCompliancetrainingandlearnings/SitePages/Regulatory-Outlook.aspx'
+    }]
   },
-  design_to_value: {
-    kpiName: 'Design To Value',
-    kpiDescription: `Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.`,
-    subKpis: [
-      {
-        subKpiName: 'Dosing & Disinfection',
-        shortDescription:
-          'Short description related to dosing & disinfection...',
-        status: IndicatorType.Warning,
-        subCategory: [
-          {
-            categoryName: 'Dosing',
-            type: CategoryType.Group,
-            status: IndicatorType.Warning,
-            data: [
-              {
-                name: 'Digital Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Mechanical Dosing',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
-          },
-          {
-            categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-        ],
-      },
-      {
-        subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
-        status: IndicatorType.Warning,
-        subCategory: [
-          {
-            categoryName: 'CR',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'CM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'BM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-          {
-            categoryName: 'MT',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
-          },
-        ],
-      },
-      {
-        subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
-        status: IndicatorType.Warning,
-        subCategory: [
-          {
-            categoryName: 'Motors and Drives Graph',
-            status: IndicatorType.Warning,
-            type: CategoryType.Group,
-            data: [
-              {
-                name: 'Motors',
-                type: SubGroupType.Dashboard,
-                link: 'graph7',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Drives',
-                type: SubGroupType.Dashboard,
-                link: '24',
-                status: IndicatorType.Warning,
-              },
-            ],
-          },
-          // Drive - 36, 37, 38
-          // Motors - 48, 19, 50, 51
-        ],
-      },
-    ],
-    site: 'https://login.sievo.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DGrundfos_PPM%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520offline_access%2520userdetails%2520is_api%2520sievo_uid%26state%3DOpenIdConnect.AuthenticationProperties%253DQQwwr9-zYqAzaQaPKo6ZOhqyA_oi_Wlfp3RDeu40nHrw-XDr4zyJXinJvxmPxOoqNiauOjDmBXm1UKhtTMT-JsKrBXt6yXXk19uU5V2rveYFgXjcq0ifH5SbVQG4Itqe%26response_mode%3Dform_post%26nonce%3D638438515690273381.Njk5ZjAwNjEtYWM3My00OTQyLTkyMzgtYm',
-  },
+  // design_to_value: {
+  //   kpiName: 'Design To Value',
+  //   kpiDescription: `Designing products to maximize value perception and cost-efficiency, aligning with customer needs and market demands.`,
+  //   subKpis: [
+  //     {
+  //       subKpiName: 'Dosing & Disinfection',
+  //       shortDescription:
+  //         '',
+  //       status: IndicatorType.Warning,
+  //       subCategory: [
+  //         {
+  //           categoryName: 'Dosing',
+  //           type: CategoryType.Group,
+  //           status: IndicatorType.Warning,
+  //           data: [
+  //             {
+  //               name: 'Digital Dosing',
+  //               type: SubGroupType.Dashboard,
+  //               link: '',
+  //               status: IndicatorType.Warning,
+  //             },
+  //             {
+  //               name: 'Mechanical Dosing',
+  //               type: SubGroupType.Dashboard,
+  //               link: '',
+  //               status: IndicatorType.Warning,
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           categoryName: 'Disinfection',
+  //           type: CategoryType.Dashboard,
+  //           link: '',
+  //           status: IndicatorType.Warning,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       subKpiName: 'Multistage',
+  //       shortDescription: '',
+  //       status: IndicatorType.Warning,
+  //       subCategory: [
+  //         {
+  //           categoryName: 'CR',
+  //           type: CategoryType.Dashboard,
+  //           link: '',
+  //           status: IndicatorType.Warning,
+  //         },
+  //         {
+  //           categoryName: 'CM',
+  //           type: CategoryType.Dashboard,
+  //           link: '',
+  //           status: IndicatorType.Warning,
+  //         },
+  //         {
+  //           categoryName: 'BM',
+  //           type: CategoryType.Dashboard,
+  //           link: '',
+  //           status: IndicatorType.Warning,
+  //         },
+  //         {
+  //           categoryName: 'MT',
+  //           type: CategoryType.Dashboard,
+  //           link: '',
+  //           status: IndicatorType.Warning,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       subKpiName: 'Motors and Drives',
+  //       shortDescription: '',
+  //       status: IndicatorType.Warning,
+  //       subCategory: [
+  //         {
+  //           categoryName: 'Motors and Drives Graph',
+  //           status: IndicatorType.Warning,
+  //           type: CategoryType.Group,
+  //           data: [
+  //             {
+  //               name: 'Motors',
+  //               type: SubGroupType.Dashboard,
+  //               link: 'graph7',
+  //               status: IndicatorType.Warning,
+  //             },
+  //             {
+  //               name: 'Drives',
+  //               type: SubGroupType.Dashboard,
+  //               link: 'graph7',
+  //               status: IndicatorType.Warning,
+  //             },
+  //           ],
+  //         },
+  //         // Drive - 36, 37, 38
+  //         // Motors - 48, 19, 50, 51
+  //       ],
+  //     },
+  //   ],
+  //   site: 'https://login.sievo.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DGrundfos_PPM%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520offline_access%2520userdetails%2520is_api%2520sievo_uid%26state%3DOpenIdConnect.AuthenticationProperties%253DQQwwr9-zYqAzaQaPKo6ZOhqyA_oi_Wlfp3RDeu40nHrw-XDr4zyJXinJvxmPxOoqNiauOjDmBXm1UKhtTMT-JsKrBXt6yXXk19uU5V2rveYFgXjcq0ifH5SbVQG4Itqe%26response_mode%3Dform_post%26nonce%3D638438515690273381.Njk5ZjAwNjEtYWM3My00OTQyLTkyMzgtYm',
+  // },
   pci: {
     kpiName: 'Product Cost Index',
     kpiDescription: `Tracking and optimizing product costs over time to ensure competitiveness and profitability in the market.`,
@@ -516,7 +518,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -526,59 +528,59 @@ export const kpiData: { [index: string]: any } = {
               {
                 name: 'Digital Dosing',
                 type: SubGroupType.Dashboard,
-                link: 'graph8',
+                graphId: 'graph8',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Mechanical Dosing',
                 type: SubGroupType.Dashboard,
-                link: 'graph9',
+                graphId: 'graph9',
                 status: IndicatorType.Warning,
               },
             ],
           },
           {
             categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: 'graph10',
+            type: CategoryType.Dashboard,
+            graphId: 'graph10',
             status: IndicatorType.Warning,
           },
         ],
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
             categoryName: 'CR',
-            type: CategoryType.Link,
-            link: 'graph11',
+            type: CategoryType.Dashboard,
+            graphId: 'graph11',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'CM',
-            type: CategoryType.Link,
-            link: 'graph13',
+            type: CategoryType.Dashboard,
+            graphId: 'graph13',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'BM',
-            type: CategoryType.Link,
-            link: 'graph12',
+            type: CategoryType.Dashboard,
+            graphId: 'graph12',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'MT',
-            type: CategoryType.Link,
-            link: 'graph14',
+            type: CategoryType.Dashboard,
+            graphId: 'graph14',
             status: IndicatorType.Warning,
           },
         ],
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -588,13 +590,13 @@ export const kpiData: { [index: string]: any } = {
               {
                 name: 'Motors',
                 type: SubGroupType.Dashboard,
-                link: 'graph15',
+                graphId: 'graph15',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Drives',
                 type: SubGroupType.Dashboard,
-                link: 'graph15',
+                graphId: 'graph15',
                 status: IndicatorType.Warning,
               },
             ],
@@ -611,80 +613,71 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Danger,
         subCategory: [
           {
-            categoryName: 'Dosing',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Do we have a single/multi source overview?',
           },
           {
-            categoryName: 'Disinfection',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Do we have a risk mitigation strategy?',
+          },
+          {
+            type: CategoryType.Question,
+            question: 'Do we have "End of Life" overview of the product family?',
+          },
+          {
+            type: CategoryType.Question,
+            question: 'Do we have a risk mitigation strategy?',
           },
         ],
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Danger,
         subCategory: [
           {
-            categoryName: 'CR',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Do we have a single/multi source overview?',
           },
           {
-            categoryName: 'CM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Do we have a risk mitigation strategy?',
           },
           {
-            categoryName: 'BM',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Do we have "End of Life" overview of the product family?',
           },
           {
-            categoryName: 'MT',
-            type: CategoryType.Link,
-            link: '',
-            status: IndicatorType.Warning,
+            type: CategoryType.Question,
+            question: 'Do we have a risk mitigation strategy?',
           },
         ],
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Danger,
         subCategory: [
           {
-            categoryName: 'Motors and Drives Graph',
-            status: IndicatorType.Warning,
-            type: CategoryType.Group,
-            data: [
-              {
-                name: 'Motors',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-              {
-                name: 'Drives',
-                type: SubGroupType.Link,
-                link: '',
-                status: IndicatorType.Warning,
-              },
-            ],
+            type: CategoryType.Question,
+            question: 'Do we have a single/multi source overview?',
           },
-          // Drive - 36, 37, 38
-          // Motors - 48, 19, 50, 51
+          {
+            type: CategoryType.Question,
+            question: 'Do we have a risk mitigation strategy?',
+          },
+          {
+            type: CategoryType.Question,
+            question: 'Do we have "End of Life" overview of the product family?',
+          },
+          {
+            type: CategoryType.Question,
+            question: 'Do we have a risk mitigation strategy?',
+          },
         ],
       },
     ],
@@ -697,7 +690,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -708,7 +701,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Positive,
         subCategory: [
           {
@@ -719,7 +712,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -738,7 +731,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Danger,
         subCategory: [
           {
@@ -757,7 +750,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Positive,
         subCategory: [
           {
@@ -776,7 +769,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Danger,
         subCategory: [
           {
@@ -803,7 +796,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Positive,
         subCategory: [
           {
@@ -817,7 +810,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Positive,
         subCategory: [
           {
@@ -830,7 +823,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Positive,
         subCategory: [
           {
@@ -851,7 +844,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -866,7 +859,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -881,7 +874,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -904,21 +897,21 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
-        status: IndicatorType.Warning,
+          '',
+        status: IndicatorType.Danger,
         subCategory: [
           {
             categoryName: 'Dosing and Disinfection graph',
             type: CategoryType.Dashboard,
             graphId: 'graph22',
-            status: IndicatorType.Warning,
+            status: IndicatorType.Danger,
           },
         ],
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
-        status: IndicatorType.Warning,
+        shortDescription: '',
+        status: IndicatorType.Danger,
         subCategory: [
           {
             categoryName: 'CR',
@@ -928,28 +921,28 @@ export const kpiData: { [index: string]: any } = {
                 name: 'Small CR',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph24',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'Large CR',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph25',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'Small CRE',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph26',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'Large CRE',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph27',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
-            status: IndicatorType.Warning,
+            status: IndicatorType.Positive,
           },
           {
             categoryName: 'CM',
@@ -965,7 +958,7 @@ export const kpiData: { [index: string]: any } = {
                 name: 'CME',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph30',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
             status: IndicatorType.Warning,
@@ -974,7 +967,7 @@ export const kpiData: { [index: string]: any } = {
             categoryName: 'BM',
             type: CategoryType.Dashboard,
             graphId: 'graph28',
-            status: IndicatorType.Warning,
+            status: IndicatorType.Danger,
           },
           {
             categoryName: 'MT',
@@ -984,40 +977,40 @@ export const kpiData: { [index: string]: any } = {
                 name: 'MT',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph31',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'MTE',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph32',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
-            status: IndicatorType.Warning,
+            status: IndicatorType.Positive,
           },
         ],
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
-        status: IndicatorType.Warning,
+        shortDescription: '',
+        status: IndicatorType.Positive,
         subCategory: [
           {
             categoryName: 'Motors and Drives Graph',
-            status: IndicatorType.Warning,
+            status: IndicatorType.Positive,
             type: CategoryType.Group,
             data: [
               {
                 name: 'Motors',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph33',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'Drives',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph34',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
           },
@@ -1035,7 +1028,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -1048,8 +1041,8 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
-        status: IndicatorType.Warning,
+        shortDescription: '',
+        status: IndicatorType.Danger,
         subCategory: [
           {
             categoryName: 'CR',
@@ -1059,28 +1052,28 @@ export const kpiData: { [index: string]: any } = {
                 name: 'Small CR',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph35',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'Large CR',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph36',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'Small CRE',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph37',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'Large CRE',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph38',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
-            status: IndicatorType.Warning,
+            status: IndicatorType.Positive,
           },
           {
             categoryName: 'CM',
@@ -1090,22 +1083,22 @@ export const kpiData: { [index: string]: any } = {
                 name: 'CM',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph40',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'CME',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph41',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
-            status: IndicatorType.Warning,
+            status: IndicatorType.Positive,
           },
           {
             categoryName: 'BM',
             type: CategoryType.Dashboard,
             graphId: 'graph39',
-            status: IndicatorType.Warning,
+            status: IndicatorType.Danger,
           },
           {
             categoryName: 'MT',
@@ -1115,40 +1108,40 @@ export const kpiData: { [index: string]: any } = {
                 name: 'MT',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph42',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
               {
                 name: 'MTE',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph43',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
-            status: IndicatorType.Warning,
+            status: IndicatorType.Positive,
           },
         ],
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
             categoryName: 'Motors and Drives Graph',
-            status: IndicatorType.Warning,
+            status: IndicatorType.Danger,
             type: CategoryType.Group,
             data: [
               {
                 name: 'Motors',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph44',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Danger,
               },
               {
                 name: 'Drives',
                 type: SubGroupType.Dashboard,
                 graphId: 'graph45',
-                status: IndicatorType.Warning,
+                status: IndicatorType.Positive,
               },
             ],
           },
@@ -1164,7 +1157,7 @@ export const kpiData: { [index: string]: any } = {
       {
         subKpiName: 'Dosing & Disinfection',
         shortDescription:
-          'Short description related to dosing & disinfection...',
+          '',
         status: IndicatorType.Positive,
         subCategory: [
           {
@@ -1177,7 +1170,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Multistage',
-        shortDescription: 'Short description related to Multistage...',
+        shortDescription: '',
         status: IndicatorType.Warning,
         subCategory: [
           {
@@ -1190,7 +1183,7 @@ export const kpiData: { [index: string]: any } = {
       },
       {
         subKpiName: 'Motors and Drives',
-        shortDescription: 'Short description related to Motors and Drives...',
+        shortDescription: '',
         status: IndicatorType.Positive,
         subCategory: [
           {

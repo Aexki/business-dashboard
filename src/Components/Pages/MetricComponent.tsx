@@ -128,7 +128,7 @@ const graphData: { [index: string]: any } = {
   },
   graph4: {
     kpiName: 'New Product Share of Sales (NPSS)',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -203,7 +203,7 @@ const graphData: { [index: string]: any } = {
   },
   graph5: {
     kpiName: 'New Product Share of Sales (NPSS)',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -278,7 +278,7 @@ const graphData: { [index: string]: any } = {
   },
   graph6: {
     kpiName: 'New Product Share of Sales (NPSS)',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -353,7 +353,7 @@ const graphData: { [index: string]: any } = {
   },
   graph7: {
     kpiName: 'Warranty Management - Digital Dosing',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -410,7 +410,7 @@ const graphData: { [index: string]: any } = {
   },
   graph8: {
     kpiName: 'Product Cost Index (PCI) - Digital Dosing',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Digital Dosing',
@@ -480,7 +480,7 @@ const graphData: { [index: string]: any } = {
   },
   graph9: {
     kpiName: 'Product Cost Index (PCI) - Mechanical Dosing',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Mechanical Dosing',
@@ -550,7 +550,7 @@ const graphData: { [index: string]: any } = {
   },
   graph10: {
     kpiName: 'Product Cost Index (PCI) - Disinfection',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Disinfection',
@@ -620,7 +620,7 @@ const graphData: { [index: string]: any } = {
   },
   graph11: {
     kpiName: 'Product Cost Index (PCI) - Multistage - CR',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Multistage - CR',
@@ -712,7 +712,7 @@ const graphData: { [index: string]: any } = {
   },
   graph12: {
     kpiName: 'Product Cost Index (PCI) - Multistage - BM',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Multistage - BM',
@@ -781,7 +781,7 @@ const graphData: { [index: string]: any } = {
   },
   graph13: {
     kpiName: 'Product Cost Index (PCI) - Multistage - CM',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Multistage - CM',
@@ -858,7 +858,7 @@ const graphData: { [index: string]: any } = {
   },
   graph14: {
     kpiName: 'Product Cost Index (PCI) - Multistage - MT',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Multistage - MT',
@@ -935,7 +935,7 @@ const graphData: { [index: string]: any } = {
   },
   graph15: {
     kpiName: 'Product Cost Index (PCI) - Drives',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       title: {
         text: 'Product Cost Index for Drives',
@@ -1003,7 +1003,7 @@ const graphData: { [index: string]: any } = {
   },
   graph16: {
     kpiName: 'Spend Management (Dosing and Disinfection) - DP',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -1074,7 +1074,7 @@ const graphData: { [index: string]: any } = {
   },
   graph17: {
     kpiName: 'Spend Management (Dosing and Disinfection) - PLM',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -1145,7 +1145,7 @@ const graphData: { [index: string]: any } = {
   },
   graph18: {
     kpiName: 'Spend Management (Multistage) - DP',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -1216,7 +1216,7 @@ const graphData: { [index: string]: any } = {
   },
   graph19: {
     kpiName: 'Spend Management (Multistage) - PLM',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -1287,7 +1287,7 @@ const graphData: { [index: string]: any } = {
   },
   graph20: {
     kpiName: 'Spend Management (Motors & Drive) - DP',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -1358,7 +1358,7 @@ const graphData: { [index: string]: any } = {
   },
   graph21: {
     kpiName: 'Spend Management (Motors & Drive) - PLM',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
@@ -2684,7 +2684,7 @@ const graphData: { [index: string]: any } = {
   },
   graph46: {
     kpiName: 'Warranty Management - Mechanical Dosing',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -2741,7 +2741,7 @@ const graphData: { [index: string]: any } = {
   },
   graph47: {
     kpiName: 'Warranty Management - Disinfection',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -2798,7 +2798,7 @@ const graphData: { [index: string]: any } = {
   },
   graph48: {
     kpiName: 'Warranty Management (Multistage) - CR',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -2855,7 +2855,7 @@ const graphData: { [index: string]: any } = {
   },
   graph49: {
     kpiName: 'Warranty Management (Multistage) - CM',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -2912,7 +2912,7 @@ const graphData: { [index: string]: any } = {
   },
   graph50: {
     kpiName: 'Warranty Management - (Multistage) - BM',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -2969,7 +2969,7 @@ const graphData: { [index: string]: any } = {
   },
   graph51: {
     kpiName: 'Warranty Management - (Multistage) - MT',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -3026,7 +3026,7 @@ const graphData: { [index: string]: any } = {
   },
   graph52: {
     kpiName: 'Warranty Management - (Motors and Drive) - Motors',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',
@@ -3083,7 +3083,7 @@ const graphData: { [index: string]: any } = {
   },
   graph53: {
     kpiName: 'Warranty Management - (Motors and Drive) - Drives',
-    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'spline',

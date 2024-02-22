@@ -202,6 +202,22 @@ const DetailsComponent = () => {
           <Typography>Link to Grundfos site for {data.kpiName}</Typography>
         </Link>
       )}
+      {data?.extraLinks?.map((linkData: { name: string; link: string }) => (
+        <Link
+          to={linkData.link}
+          target="_blank"
+          style={{
+            display: 'flex',
+            marginTop: '10px',
+            color: '#01386B',
+            textUnderlineOffset: 3,
+          }}
+          key={linkData.name}
+        >
+          <LinkIcon sx={{ mt: '1px', mr: 1 }} />
+          <Typography>{linkData.name}</Typography>
+        </Link>
+      ))}
       {data.subKpis.length > 0 && (
         <Typography
           sx={{
