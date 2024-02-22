@@ -237,7 +237,7 @@ export const kpiData: { [index: string]: any } = {
               {
                 name: 'Mechanical Dosing',
                 type: SubGroupType.Dashboard,
-                graphId: 'graph7',
+                graphId: 'graph46',
                 status: IndicatorType.Positive,
               },
             ],
@@ -245,7 +245,7 @@ export const kpiData: { [index: string]: any } = {
           {
             categoryName: 'Disinfection',
             type: CategoryType.Dashboard,
-            graphId: 'graph7',
+            graphId: 'graph47',
             status: IndicatorType.Warning,
           },
         ],
@@ -258,25 +258,25 @@ export const kpiData: { [index: string]: any } = {
           {
             categoryName: 'CR',
             type: CategoryType.Dashboard,
-            graphId: 'graph7',
+            graphId: 'graph48',
             status: IndicatorType.Warning,
           },
           {
             categoryName: 'CM',
             type: CategoryType.Dashboard,
-            graphId: 'graph7',
+            graphId: 'graph49',
             status: IndicatorType.Positive,
           },
           {
             categoryName: 'BM',
             type: CategoryType.Dashboard,
-            graphId: 'graph7',
+            graphId: 'graph50',
             status: IndicatorType.Danger,
           },
           {
             categoryName: 'MT',
             type: CategoryType.Dashboard,
-            graphId: 'graph7',
+            graphId: 'graph51',
             status: IndicatorType.Warning,
           },
         ],
@@ -293,13 +293,13 @@ export const kpiData: { [index: string]: any } = {
               {
                 name: 'Motors',
                 type: SubGroupType.Dashboard,
-                link: 'graph7',
+                graphId: 'graph52',
                 status: IndicatorType.Warning,
               },
               {
                 name: 'Drives',
                 type: SubGroupType.Dashboard,
-                link: '24',
+                graphId: 'graph53',
                 status: null,
               },
             ],

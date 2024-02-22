@@ -1533,14 +1533,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph24: {
-    kpiName: 'Sales Revenue (Multistage) - Small CR',
+    kpiName: 'Sales Volume (Multistage) - Small CR',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - Small CR',
+        text: 'Sales Volume (Multistage) - Small CR',
         align: 'center',
       },
       xAxis: {
@@ -1586,14 +1586,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph25: {
-    kpiName: 'Sales Revenue (Multistage) - Large CR',
+    kpiName: 'Sales Volume (Multistage) - Large CR',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - Large CR',
+        text: 'Sales Volume (Multistage) - Large CR',
         align: 'center',
       },
       xAxis: {
@@ -1639,14 +1639,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph26: {
-    kpiName: 'Sales Revenue (Multistage) - Small CRE',
+    kpiName: 'Sales Volume (Multistage) - Small CRE',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - Small CRE',
+        text: 'Sales Volume (Multistage) - Small CRE',
         align: 'center',
       },
       xAxis: {
@@ -1692,14 +1692,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph27: {
-    kpiName: 'Sales Revenue (Multistage) - Large CRE',
+    kpiName: 'Sales Volume (Multistage) - Large CRE',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - Large CRE',
+        text: 'Sales Volume (Multistage) - Large CRE',
         align: 'center',
       },
       xAxis: {
@@ -1742,14 +1742,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph28: {
-    kpiName: 'Sales Revenue (Multistage) - BM',
+    kpiName: 'Sales Volume (Multistage) - BM',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - BM',
+        text: 'Sales Volume (Multistage) - BM',
         align: 'center',
       },
       xAxis: {
@@ -1792,14 +1792,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph29: {
-    kpiName: 'Sales Revenue (Multistage) - CM',
+    kpiName: 'Sales Volume (Multistage) - CM',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - CM',
+        text: 'Sales Volume (Multistage) - CM',
         align: 'center',
       },
       xAxis: {
@@ -1845,14 +1845,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph30: {
-    kpiName: 'Sales Revenue (Multistage) - CME',
+    kpiName: 'Sales Volume (Multistage) - CME',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - CME',
+        text: 'Sales Volume (Multistage) - CME',
         align: 'center',
       },
       xAxis: {
@@ -1897,14 +1897,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph31: {
-    kpiName: 'Sales Revenue (Multistage) - MT',
+    kpiName: 'Sales Volume (Multistage) - MT',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - MT',
+        text: 'Sales Volume (Multistage) - MT',
         align: 'center',
       },
       xAxis: {
@@ -1950,14 +1950,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph32: {
-    kpiName: 'Sales Revenue (Multistage) - MTE',
+    kpiName: 'Sales Volume (Multistage) - MTE',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Multistage) - MTE',
+        text: 'Sales Volume (Multistage) - MTE',
         align: 'center',
       },
       xAxis: {
@@ -2000,14 +2000,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph33: {
-    kpiName: 'Sales Revenue (Motors)',
+    kpiName: 'Sales Volume (Motors)',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Motors)',
+        text: 'Sales Volume (Motors)',
         align: 'center',
       },
       xAxis: {
@@ -2050,14 +2050,14 @@ const graphData: { [index: string]: any } = {
     },
   },
   graph34: {
-    kpiName: 'Sales Revenue (Drives)',
+    kpiName: 'Sales Volume (Drives)',
     kpiDescription: ``,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Sales Revenue (Drives)',
+        text: 'Sales Volume (Drives)',
         align: 'center',
       },
       xAxis: {
@@ -2678,6 +2678,462 @@ const graphData: { [index: string]: any } = {
             8543, 9918, 7826, 8376, 11830, 7397, 8883, 10971, 5226, 7794, 5999,
             8199,
           ],
+        },
+      ],
+    },
+  },
+  graph46: {
+    kpiName: 'Warranty Management - Mechanical Dosing',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Mechanical Dosing Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
+        },
+      ],
+    },
+  },
+  graph47: {
+    kpiName: 'Warranty Management - Disinfection',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Disinfection Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
+        },
+      ],
+    },
+  },
+  graph48: {
+    kpiName: 'Warranty Management (Multistage) - CR',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Multistage - CR Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
+        },
+      ],
+    },
+  },
+  graph49: {
+    kpiName: 'Warranty Management (Multistage) - CM',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Multistage - CM Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
+        },
+      ],
+    },
+  },
+  graph50: {
+    kpiName: 'Warranty Management - (Multistage) - BM',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Multistage - BM Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
+        },
+      ],
+    },
+  },
+  graph51: {
+    kpiName: 'Warranty Management - (Multistage) - MT',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Multistage - MT Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
+        },
+      ],
+    },
+  },
+  graph52: {
+    kpiName: 'Warranty Management - (Motors and Drive) - Motors',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Motors and Drive - Motors Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
+        },
+      ],
+    },
+  },
+  graph53: {
+    kpiName: 'Warranty Management - (Motors and Drive) - Drives',
+    kpiDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    chartOptions: {
+      chart: {
+        type: 'spline',
+        scrollablePlotArea: {
+          minWidth: 600,
+          scrollPositionX: 1,
+        },
+      },
+      title: {
+        text: 'Graph: Motors and Drive - Drives Target vs. Actual Over the Last 3 Years',
+        align: 'center',
+      },
+      xAxis: {
+        type: 'datetime',
+        labels: {
+          overflow: 'justify',
+        },
+      },
+      yAxis: {
+        title: {
+          text: 'In Millions',
+        },
+      },
+      tooltip: {
+        valueSuffix: ' M',
+      },
+      plotOptions: {
+        spline: {
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidth: 5,
+            },
+          },
+          marker: {
+            enabled: false,
+          },
+          pointInterval: 30 * 24 * 3600 * 1000, // 1 month in milliseconds
+          pointStart: Date.UTC(2021, 1, 1, 0, 0, 0),
+        },
+      },
+      series: [
+        {
+          name: 'Target',
+          data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1, 5.6, 5.9, 7.1, 8.6, 7.8],
+          color: 'red',
+        },
+        {
+          name: 'Actual',
+          data: [0.2, 0.1, 0.1, 0.5, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 1.1],
         },
       ],
     },

@@ -74,7 +74,7 @@ const DetailsComponent = () => {
                 return (
                   <ListItem key={subData.name}>
                     <ListItemIcon>
-                      <SubdirectoryArrowRightIcon />
+                      <SubdirectoryArrowRightIcon sx={{ ml: 1 }} />
                     </ListItemIcon>
                     <CircleIcon
                       sx={{ color: getColor(subData.status), fontSize: 10 }}
@@ -107,7 +107,6 @@ const DetailsComponent = () => {
             <CircleIcon
               sx={{ color: getColor(category.status), fontSize: 10 }}
             />
-            &nbsp;
             <ListItem key={category.categoryName}>
               <Link to={`/${params.kpiId}/${category.graphId}`}>
                 <ListItemText
@@ -200,7 +199,7 @@ const DetailsComponent = () => {
           }}
         >
           <LinkIcon sx={{ mt: '1px', mr: 1 }} />
-          <Typography>Link to Grundfos site for {data.kpiName} KPI</Typography>
+          <Typography>Link to Grundfos site for {data.kpiName}</Typography>
         </Link>
       )}
       {data.subKpis.length > 0 && (
