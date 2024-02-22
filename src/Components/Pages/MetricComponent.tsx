@@ -7,123 +7,252 @@ import BackNavigationComponent from '../common/BackNavigationComponent';
 
 const graphData: { [index: string]: any } = {
   graph1: {
-    kpiName: 'Patent Portfolio (live patents)',
+    kpiName: 'IP Management - Dosing and Disinfection',
     kpiDescription: `Displaying the number of filings per year over the past decade for Dosing & Disinfection patents.`,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Number of filings  - Dosing & Disinfection',
+        text: 'IP Management - Dosing and Disinfection - Filed vs Alive today',
         align: 'center',
-      },
-      xAxis: {
-        categories: [
-          2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,
-          2022,
-        ],
-        crosshair: true,
-      },
-      yAxis: {
-        title: {
-          text: 'Filings',
-        },
-      },
-      tooltip: {
-        valueSuffix: ' filing(s)',
       },
       plotOptions: {
         column: {
+          grouping: false,
           pointPadding: 0.2,
           borderWidth: 0,
         },
       },
-      series: [
+      legend: {
+        enabled: true,
+      },
+      tooltip: {
+        shared: true,
+        pointFormat:
+          '<span style="color:{point.color}">\u25CF</span> ' +
+          '{series.name}: <b>{point.y} filings</b><br/>',
+      },
+      xAxis: {
+        categories: [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          'Total',
+        ],
+        crosshair: true,
+      },
+      yAxis: [
         {
-          name: 'Filings',
-          data: [16, 1, 3, 6, 1, 0, 0, 2, 0, 3, 0, 2],
+          title: {
+            text: 'Filings',
+          },
+          showFirstLabel: true,
         },
       ],
+      series: [
+        {
+          color: 'rgba(158, 159, 163, 0.5)',
+          pointPlacement: -0.2,
+          data: [1, 8, 1, 2, 1, 0, 0, 0, 0, 1, 1, 2, 1, 2, 0, 20],
+          name: 'No. of patent(s) filed in the year',
+        },
+        {
+          name: 'No. of patent(s) alive today',
+          id: 'main',
+          dataLabels: [
+            {
+              enabled: true,
+              inside: true,
+              style: {
+                fontSize: '16px',
+              },
+            },
+          ],
+          data: [0, 6, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 2, 0, 13],
+        },
+      ],
+      exporting: {
+        allowHTML: true,
+      },
     },
   },
   graph2: {
-    kpiName: 'Patent Portfolio (live patents)',
-    kpiDescription: `Displaying the number of filings per year over the past decade for Multistage patents.`,
+    kpiName: 'IP Management - Multistage',
+    kpiDescription: `Displaying the number of filings per year over the past decade for Dosing & Disinfection patents.`,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Number of filings - Multistage',
+        text: 'IP Management - Multistage - Filed vs Alive today',
         align: 'center',
-      },
-      xAxis: {
-        categories: [
-          2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,
-          2022, 2023,
-        ],
-        crosshair: true,
-      },
-      yAxis: {
-        title: {
-          text: 'Filings',
-        },
-      },
-      tooltip: {
-        valueSuffix: ' filing(s)',
       },
       plotOptions: {
         column: {
+          grouping: false,
           pointPadding: 0.2,
           borderWidth: 0,
         },
       },
-      series: [
+      legend: {
+        enabled: true,
+      },
+      tooltip: {
+        shared: true,
+        pointFormat:
+          '<span style="color:{point.color}">\u25CF</span> ' +
+          '{series.name}: <b>{point.y} filings</b><br/>',
+      },
+      xAxis: {
+        categories: [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          'Total',
+        ],
+        crosshair: true,
+      },
+      yAxis: [
         {
-          name: 'Filings',
-          data: [27, 6, 3, 5, 7, 5, 6, 6, 0, 2, 1, 0, 2],
+          title: {
+            text: 'Filings',
+          },
+          showFirstLabel: true,
         },
       ],
+      series: [
+        {
+          color: 'rgba(158, 159, 163, 0.5)',
+          pointPlacement: -0.2,
+          data: [6, 3, 6, 3, 3, 5, 8, 5, 3, 7, 0, 1, 2, 0, 2, 54],
+          name: 'No. of patent(s) filed in the year',
+        },
+        {
+          name: 'No. of patent(s) alive today',
+          id: 'main',
+          dataLabels: [
+            {
+              enabled: true,
+              inside: true,
+              style: {
+                fontSize: '16px',
+              },
+            },
+          ],
+          data: [4, 0, 2, 1, 0, 2, 7, 3, 0, 3, 0, 1, 2, 0, 2, 27],
+        },
+      ],
+      exporting: {
+        allowHTML: true,
+      },
     },
   },
   graph3: {
-    kpiName: 'Patent Portfolio (live patents)',
-    kpiDescription: `Displaying the number of filings per year over the past decade for Motors and Drives patents.`,
+    kpiName: 'IP Management - Motors and Drives',
+    kpiDescription: `Displaying the number of filings per year over the past decade for Dosing & Disinfection patents.`,
     chartOptions: {
       chart: {
         type: 'column',
       },
       title: {
-        text: 'Number of filings  - Motors and drives',
+        text: 'IP Management - Motors and Drives - Filed vs Alive today',
         align: 'center',
-      },
-      xAxis: {
-        categories: [
-          2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,
-          2022,
-        ],
-        crosshair: true,
-      },
-      yAxis: {
-        title: {
-          text: 'Filings',
-        },
-      },
-      tooltip: {
-        valueSuffix: ' filing(s)',
       },
       plotOptions: {
         column: {
+          grouping: false,
           pointPadding: 0.2,
           borderWidth: 0,
         },
       },
-      series: [
+      legend: {
+        enabled: true,
+      },
+      tooltip: {
+        shared: true,
+        pointFormat:
+          '<span style="color:{point.color}">\u25CF</span> ' +
+          '{series.name}: <b>{point.y} filings</b><br/>',
+      },
+      xAxis: {
+        categories: [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          'Total',
+        ],
+        crosshair: true,
+      },
+      yAxis: [
         {
-          name: 'Filings',
-          data: [8, 3, 0, 1, 0, 1, 0, 0, 1, 3, 0, 2],
+          title: {
+            text: 'Filings',
+          },
+          showFirstLabel: true,
         },
       ],
+      series: [
+        {
+          color: 'rgba(158, 159, 163, 0.5)',
+          pointPlacement: -0.2,
+          data: [0, 0, 2, 4, 0, 1, 0, 1, 0, 0, 1, 3, 0, 2, 0, 14],
+          name: 'No. of patent(s) filed in the year',
+        },
+        {
+          name: 'No. of patent(s) alive today',
+          id: 'main',
+          dataLabels: [
+            {
+              enabled: true,
+              inside: true,
+              style: {
+                fontSize: '16px',
+              },
+            },
+          ],
+          data: [0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 8],
+        },
+      ],
+      exporting: {
+        allowHTML: true,
+      },
     },
   },
   graph4: {
@@ -149,10 +278,6 @@ const graphData: { [index: string]: any } = {
       },
       tooltip: {
         shared: true,
-        headerFormat:
-          '<span style="font-size: 15px">' +
-          '{series.chart.options.countries.(point.key).name}' +
-          '</span><br/>',
         pointFormat:
           '<span style="color:{point.color}">\u25CF</span> ' +
           '{series.name}: <b>{point.y} millions</b><br/>',
@@ -180,10 +305,6 @@ const graphData: { [index: string]: any } = {
         {
           name: 'Actual',
           id: 'main',
-          dataSorting: {
-            enabled: true,
-            matchByName: true,
-          },
           dataLabels: [
             {
               enabled: true,
@@ -224,10 +345,6 @@ const graphData: { [index: string]: any } = {
       },
       tooltip: {
         shared: true,
-        headerFormat:
-          '<span style="font-size: 15px">' +
-          '{series.chart.options.countries.(point.key).name}' +
-          '</span><br/>',
         pointFormat:
           '<span style="color:{point.color}">\u25CF</span> ' +
           '{series.name}: <b>{point.y} millions</b><br/>',
@@ -255,10 +372,6 @@ const graphData: { [index: string]: any } = {
         {
           name: 'Actual',
           id: 'main',
-          dataSorting: {
-            enabled: true,
-            matchByName: true,
-          },
           dataLabels: [
             {
               enabled: true,
@@ -299,10 +412,6 @@ const graphData: { [index: string]: any } = {
       },
       tooltip: {
         shared: true,
-        headerFormat:
-          '<span style="font-size: 15px">' +
-          '{series.chart.options.countries.(point.key).name}' +
-          '</span><br/>',
         pointFormat:
           '<span style="color:{point.color}">\u25CF</span> ' +
           '{series.name}: <b>{point.y} millions</b><br/>',

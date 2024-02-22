@@ -22,7 +22,7 @@ const ScorecardComponent = () => {
     <Grid container spacing={2} sx={{ p: 5 }}>
       {scorecardList.map((scorecardData, index) => {
         return (
-          <Grid item sm={12} md={6} lg={4} key={index}>
+          <Grid item sm={12} md={6} xl={4} key={index}>
             <Link
               to={`/${scorecardData.kpiId}`}
               style={{ textDecoration: 'none' }}
